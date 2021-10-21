@@ -14,35 +14,35 @@ This website is a personal project built using React js. It serves as my playgro
 ## Features & Screenshots
 
 <p>
-  <img src="screen-capture/screencast1.gif" alt="Screen Recording 1" width="534" height="300">  
+  <img src="screen-captures/screencast1.gif" alt="Screen Recording 1" width="534" height="300">  
 </p>
 <br />
 <br />
 
 **Custom Carousel**
 <p>
-  <img src="screen-capture/screencast2.gif" alt="Screen Recording 2" width="534" height="300">  
+  <img src="screen-captures/screencast2.gif" alt="Screen Recording 2" width="534" height="300">  
 </p>
 <br />
 <br />
 
 **REST API Integration**
 <p>
-  <img src="screen-capture/screencast3.gif" alt="Screen Recording 3" width="534" height="300">  
+  <img src="screen-captures/screencast3.gif" alt="Screen Recording 3" width="534" height="300">  
 </p>
 <br />
 <br />
 
 **GraphQL API Integration**
 <p>
-  <img src="screen-capture/screencast6.gif" alt="Screen Recording 4" width="534" height="252">  
+  <img src="screen-captures/screencast6.gif" alt="Screen Recording 4" width="534" height="252">  
 </p>
 <br />
 <br />
 
 **Mobile Responsive**
 <p>
-  <img src="screen-capture/screencast5.gif" alt="Screen Recording 4" width="534" height="300">  
+  <img src="screen-captures/screencast5.gif" alt="Screen Recording 4" width="534" height="300">  
 </p>
 <br />
 
