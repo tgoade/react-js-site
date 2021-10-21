@@ -1,0 +1,58 @@
+.location-bar {
+    display: flex;
+    flex: 1 1 0%;
+    position: absolute;
+    border: 1px solid #DDDDDD;
+    border-radius: 32px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+    box-shadow: 0px 16px 32px rgb(0 0 0 / 15%), 0px 3px 8px rgb(0 0 0 / 10%);
+    width: 100%;
+    height: 66px;
+}
+.location-field, .dates-field, .guests-fields {
+    display: flex;
+}
+.location-bar input {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+.location-bar--labels {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 800;
+    color: #000;
+}
+.location-bar--padding {
+    padding: 14px 24px;
+}
+.places .location-field {
+    width: 30%;
+}
+.places .dates-field, .places .guests-fields {
+    width: 20%;
+}
+.field-separator {
+    border-right: 1px solid #DDD;
+    height: 32px;
+    align-self: center;
+}
+.circ-search {
+    background-color: transparent;
+    border: none;
+    border-radius: 35px;
+    padding: 20px;
+    width: 10%;
+}
+.guests-fields {
+    display: flex;
+}
+@media screen and (max-width: 960px) {
+    .location-bar {
+        display: none;
+    }
+}
