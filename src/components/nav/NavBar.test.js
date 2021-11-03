@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import NavBar from './NavBar';
 
 describe('Test suit for navigation components', () => {
-    test('checks if text appears on screen', () => {
+    test('to check if text appears on screen', () => {
         // Arrange
         render(<BrowserRouter><NavBar /></BrowserRouter>);
         // Act
@@ -14,7 +14,7 @@ describe('Test suit for navigation components', () => {
         expect(navElement).toBeInTheDocument();
     });
 
-    test('checks if "Check In" appears if "Places to Stay" button is clicked', () => {
+    test('to check if "Check In" appears if "Places to Stay" button is clicked', () => {
         // Arrange
         render(<BrowserRouter><NavBar /></BrowserRouter>);
         // Act
@@ -25,7 +25,7 @@ describe('Test suit for navigation components', () => {
         expect(placesOutput).toBeInTheDocument();
     });
 
-    test('checks if "Guests" appears if "Experiences" button is clicked', () => {
+    test('to check if "Guests" appears if "Experiences" button is clicked', () => {
         // Arrange
         render(<BrowserRouter><NavBar /></BrowserRouter>);
         // Act
@@ -34,5 +34,16 @@ describe('Test suit for navigation components', () => {
         // Assert
         const experiencesOutput = screen.getByText(/guests/i);
         expect(experiencesOutput).toBeInTheDocument();
+    });
+
+    test('to check if "Check In" does not appears if "Experiences" button is clicked', () => {
+        // Arrange
+        render(<BrowserRouter><NavBar /></BrowserRouter>);
+        // Act
+        const experiencesElememt = screen.getByText(/experiences/i);
+        userEvent.click(experiencesElememt);
+        // Assert
+        const experiencesOutput = screen.queryByText(/check in/i);
+        expect(experiencesOutput).toBeNull();
     });
 });
