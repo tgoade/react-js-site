@@ -6,7 +6,7 @@ const SmallCardItem = ({path, src, text}) => {
     return (
         <>
           <li className="small_cards__item">
-                <Card path={path} className="small_card">
+                <Card path={path} text={text} className="small_card">
                     <img src={src} className="small_cards__item__img" alt="Travel Type" />
                 </Card>
                 <div className="small_cards__item__info">

@@ -2,7 +2,7 @@ import './Button.css';
 import { Link } from 'react-router-dom';
 
 
-const Button = ({ children, onClick, path, buttonStyle, buttonSize }) => {
+const Button = ({ children, onClick, path, buttonStyle, buttonSize}) => {
 
     const STYLES = ['btn--primary', 'btn--outline', 'btn--blue'];
 
@@ -13,8 +13,8 @@ const Button = ({ children, onClick, path, buttonStyle, buttonSize }) => {
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
     return (
-        <Link to={path} className="btn-mobile">
-            <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} >         {/* The curly braces in JSX means process the inner value in JavaScript instead of a string like with quotes. ex. variables */}
+        <Link to={path} className="btn-mobile" aria-label="hero button link">
+            <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type="button">         {/* The curly braces in JSX means process the inner value in JavaScript instead of a string like with quotes. ex. variables */}
                 {children}                                                                                          {/* ${} is a JS ES6 feature. Here, it's used to concatenate a string with the value of a js expression. `string ${expression}` = 'string ' + expression */}
             </button>
         </Link>
