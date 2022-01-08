@@ -1,11 +1,17 @@
 // import { useState, useEffect } from 'react';
+import * as React from 'react';
 import NavBarLogic from './NavBarLogic';
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 import LocationBar from './LocationBar';
 import ExperiencesBar from './ExperiencesBar';
 
-const Navbar = ({navColor, navBorder}) => {
+interface NavBarProps {
+    navColor: string;
+    navBorder: string
+}
+
+const Navbar = ({navColor, navBorder}: NavBarProps) => {
 
     const { button, placesBarActive, experBarActive, handleClick, placesBarHandler, experBarHandler, closeMenuBars, menuClicked } = NavBarLogic();
 
@@ -17,6 +23,7 @@ const Navbar = ({navColor, navBorder}) => {
 
     const checkTextColor = COLOR.includes(navColor) ? navColor : COLOR[0];                          // Checks whether a navColor was assigned
 
+    //const userIcons = '<i className="fas fa-bars fa-lg"></i><i className="fas fa-user-circle fa-lg"></i>'
 
     return (
         <div>

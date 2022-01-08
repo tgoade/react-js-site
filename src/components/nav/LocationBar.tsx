@@ -1,3 +1,4 @@
+import * as React from 'react';
 import './LocationBar.css';
 
 const LocationBar = () => {

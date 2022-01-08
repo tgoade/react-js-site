@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Navbar from "../../components/nav/NavBar";
 import { useLocation } from "react-router-dom";
 

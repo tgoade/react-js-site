@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 describe('Test suit for navigation components', () => {
     test('to check if text appears on screen', () => {
         // Arrange
-        render(<BrowserRouter><NavBar /></BrowserRouter>);
+        render(<BrowserRouter><NavBar navColor='' navBorder=''/></BrowserRouter>);
         // Act
         // (nothing)
         // Assert
@@ -16,7 +16,7 @@ describe('Test suit for navigation components', () => {
 
     test('to check if "Check In" appears if "Places to Stay" button is clicked', () => {
         // Arrange
-        render(<BrowserRouter><NavBar /></BrowserRouter>);
+        render(<BrowserRouter><NavBar navColor='' navBorder='' /></BrowserRouter>);
         // Act
         const placesElememt = screen.getByText(/places to stay/i);
         userEvent.click(placesElememt);
@@ -27,7 +27,7 @@ describe('Test suit for navigation components', () => {
 
     test('to check if "Guests" appears if "Experiences" button is clicked', () => {
         // Arrange
-        render(<BrowserRouter><NavBar /></BrowserRouter>);
+        render(<BrowserRouter><NavBar navColor='' navBorder='' /></BrowserRouter>);
         // Act
         const experiencesElememt = screen.getByText(/experiences/i);
         userEvent.click(experiencesElememt);
@@ -38,7 +38,7 @@ describe('Test suit for navigation components', () => {
 
     test('to check if "Check In" does not appears if "Experiences" button is clicked', () => {
         // Arrange
-        render(<BrowserRouter><NavBar /></BrowserRouter>);
+        render(<BrowserRouter><NavBar navColor='' navBorder='' /></BrowserRouter>);
         // Act
         const experiencesElememt = screen.getByText(/experiences/i);
         userEvent.click(experiencesElememt);

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import PlacesToStay from "./pages/placesToStay/PlacesToStay";
@@ -6,7 +7,6 @@ import Beaches from "./pages/beaches/Beaches";
 import Snowy from "./pages/snowy/Snowy";
 import Footer from "./components/footer/Footer";
 import Whoops404 from "./pages/whoops404/Whoops404";
-import Test from "./components/Test";
 
 function App() {
   return (
@@ -18,7 +18,6 @@ function App() {
           <Route path="/beaches" exact component={Beaches} />
           <Route path="/mountains" exact component={Mountains} />
           <Route path="/snowy" exact component={Snowy} />
-          <Route path="/test" component={Test} />
           <Route path="/" exact component={Home} />
           <Route path="*" component={Whoops404} />
         </Switch> 

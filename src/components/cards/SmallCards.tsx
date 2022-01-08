@@ -1,3 +1,4 @@
+import * as React from 'react';
 import SmallCardItem from './SmallCardItem';
 import './SmallCards.css';
 

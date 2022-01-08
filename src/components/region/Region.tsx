@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Countries from "./Countries";
 import Currency from "./Currency";
 import "./Region.css";

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useState, useEffect } from 'react';
 
 const NavBarLogic = () => {
@@ -14,14 +15,14 @@ const NavBarLogic = () => {
         setMenuClicked(!menuClicked)
     };                                              // Change state to the opposite as above when clicked
     
-    const placesBarHandler = (event) => { 
+    const placesBarHandler = (event: React.MouseEvent<HTMLElement>) => { 
         event.preventDefault()
         setExperBarActive(false);
         setPlacesBarActive(true);
         setMenuClicked(false);                      // To close mobile menu when clicked
     }
     
-    const experBarHandler = (event) => { 
+    const experBarHandler = (event: React.MouseEvent<HTMLElement>) => { 
         event.preventDefault();
         setPlacesBarActive(false);
         setExperBarActive(true);

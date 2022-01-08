@@ -1,8 +1,8 @@
-//import { Link } from 'react-router-dom';
-import Card from './Card';
+import * as React from 'react';
+import Card, { CardProps } from './Card';
 import './SmallCards.css';
 
-const SmallCardItem = ({path, src, text}) => {
+const SmallCardItem = ({path, src, text} : CardProps) => {
     return (
         <>
           <li className="small_cards__item">

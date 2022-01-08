@@ -1,17 +1,18 @@
+//import * as React from 'react';
 import { useState, useRef, useEffect } from "react";
 
 const CarouselLogic = () => {
 
-    const track = document.querySelector(".track");               // Grabs the track element
+    const track = document.querySelector<HTMLElement>(".track");               // Grabs the track element
 
-    const itemRef = useRef(0);                                 // Using useRef to point to the carousel-container in the DOM
+    const itemRef = useRef<HTMLDivElement>(null);                                 // Using useRef to point to the carousel-container in the DOM
     const [carouselWidth, setCarouselWidth] = useState(0);             // useRef is very similar to useState in that it can stores a previous values in it and it persists between renders, but it does not cause you to re-render like useState does (which can cause an infinity loop)
     const [nextButton, setNextButton] = useState(true);
     const [prevButton, setPrevButton] = useState(false);
     const [count, setCount] = useState(0);
 
     useEffect(() => {                                         // useRef returns an object current { current: 0 }, so itemRef is just an object with a current property
-        if (itemRef.current) {                                              
+        if (itemRef && itemRef.current) {                                              
             setCarouselWidth(itemRef.current.clientWidth);      // clientWidth is the inner width of an element in pixels. In this case, the carousel-container div. It includes padding but excludes borders, margins, and vertical scrollbars (if present).
         }
     }, []);                                                   // only run this on initial render

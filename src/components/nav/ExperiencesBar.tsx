@@ -1,3 +1,4 @@
+import * as React from 'react';
 import './ExperiencesBar.css';
 
 const ExperiencesBar = () => {
@@ -15,7 +16,6 @@ const ExperiencesBar = () => {
                     <div className="location-bar--labels">Guests</div>
                     <input placeholder="Add Guests" />
                 </div>
-                
             </div>
             <button className="circ-search"><i className="fas fa-search"></i></button>
         </div>

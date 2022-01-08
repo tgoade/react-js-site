@@ -1,3 +1,4 @@
+import * as React from 'react';
 import CarouselLogic from "./CarouselLogic";
 import "./Carousel.css";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";

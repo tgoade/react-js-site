@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react";
 
+// interface CountryResults {
+//     data: {
+//         countries: [
+//             {
+//                 name: string;
+//                 currency: string
+//             }
+//         ]
+//     }
+// }
+
 const RegionLogic = () => {
-    const [countries, setCountries] = useState(null);
+    const [countries, setCountries] = useState<string[] | null>(null);
     const [country, setCountry] = useState("United States");
     const [currency, setCurrency] = useState("USD");
 
@@ -28,11 +39,11 @@ const RegionLogic = () => {
     
     let defaultCurrency = "USD";
     
-    const countryHandler = (event) => {
+    const countryHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setCountry(event.target.value);
     }
 
-    const currencyHandler = (event) => {
+    const currencyHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setCurrency(event.target.value);
     }
 

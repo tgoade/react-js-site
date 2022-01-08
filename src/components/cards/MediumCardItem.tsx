@@ -1,7 +1,8 @@
-import Card from "./Card";
+import * as React from 'react';
+import Card, { CardProps } from "./Card";
 import './MediumCardItem.css';
 
-const MediumCardItem = ({path, src, text}) => {
+const MediumCardItem = ({path, src, text} : CardProps) => {
     return (
         <>
           <li className="cards__item">

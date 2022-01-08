@@ -1,5 +1,13 @@
+import * as React from 'react';
 
-const CarouselItem = ({src, index}) => {
+export interface CarouselItemProp {
+    src: string;
+    index?: string;
+    alt: string;
+    className?: string
+}
+
+const CarouselItem = ({src, index} : CarouselItemProp) => {
     return (
         <div className="card-container">
             <div className="card">
